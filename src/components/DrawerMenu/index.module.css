@@ -1,0 +1,67 @@
+/* Menu button styling */
+.menu-button {
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  /* Drawer styling */
+  .drawer {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: 0.3s ease;
+    z-index: 1000;
+    overflow-x: hidden;
+  }
+  
+  .drawer.open {
+    left: 0;
+  }
+  
+  /* Navigation list styling */
+  .drawer nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .drawer nav ul li a, .drawer h3 {
+    padding: 10px 20px;
+    transition: all 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .drawer nav ul li a:hover {
+    background-color: #575757;
+  }
+  
+  .drawer nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+
+  
+  /* Overlay styling */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+    pointer-events: none;
+  }
+  
+  .overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+  }

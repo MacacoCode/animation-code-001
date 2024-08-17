@@ -1,13 +1,17 @@
 import { useState } from 'react'
 import './App.css'
-import { RouterProvider } from 'react-router-dom'
-import router from './routes'
+import { Outlet } from 'react-router-dom'
+import DrawerMenu from './components/DrawerMenu'
+
 
 function App() {
 
   return (
-    <RouterProvider router={router} />
+    <>
+      <DrawerMenu />
+      <Outlet />
+    </>
   )
 }
 
-export default App
+export default App;
