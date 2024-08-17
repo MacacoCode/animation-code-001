@@ -5,7 +5,7 @@ interface IAnimationsProps {
 animation: TAnimation;
 }
 
-const Animations = ({ animation }: IAnimationsProps) => {
+const AnimationsPage = ({ animation }: IAnimationsProps) => {
     return (
         <div>
             Hello There {animation}
@@ -13,4 +13,4 @@ const Animations = ({ animation }: IAnimationsProps) => {
     );
 };
 
-export default Animations;
+export default AnimationsPage;

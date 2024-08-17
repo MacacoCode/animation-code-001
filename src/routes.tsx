@@ -1,6 +1,5 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
-import DrawerMenu from "./components/DrawerMenu";
-import Animations from "./pages/Animations";
+import Animations from "./pages/AnimationsPage";
 import App from "./App";
 
 const router = createBrowserRouter([
