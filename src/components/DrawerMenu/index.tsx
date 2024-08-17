@@ -6,9 +6,9 @@ const navItems = [
   {
     id: 1,
     text: '01 - Rays',
-    to: '/01-rays'
-  }
-]
+    to: '/01-rays',
+  },
+];
 
 const DrawerMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,21 +19,25 @@ const DrawerMenu: React.FC = () => {
 
   return (
     <div>
-      <button className={styles["menu-button"]} onClick={toggleDrawer}>
+      <button className={styles['menu-button']} onClick={toggleDrawer}>
         ☰
       </button>
       <div className={`${styles[`drawer`]} ${styles[isOpen ? 'open' : '']}`}>
         <h3>Code 001</h3>
         <nav>
           <ul>
-            {navItems.map((item) => (
-              <li key={item?.id} onClick={toggleDrawer}><Link to={item?.to}>{item?.text}</Link></li>
-
+            {navItems.map(item => (
+              <li key={item?.id} onClick={toggleDrawer}>
+                <Link to={item?.to}>{item?.text}</Link>
+              </li>
             ))}
           </ul>
         </nav>
       </div>
-      <div className={`${styles[`overlay`]} ${styles[isOpen ? 'show' : '']}`} onClick={toggleDrawer}></div>
+      <div
+        className={`${styles[`overlay`]} ${styles[isOpen ? 'show' : '']}`}
+        onClick={toggleDrawer}
+      ></div>
     </div>
   );
 };

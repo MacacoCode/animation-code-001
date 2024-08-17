@@ -1,22 +1,23 @@
-import { createBrowserRouter, Navigate } from "react-router-dom";
-import Animations from "./pages/AnimationsPage";
-import App from "./App";
+import { createBrowserRouter, Navigate } from 'react-router-dom';
+import Animations from './pages/AnimationsPage';
+import App from './App';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <App />,
-    children: [ 
+    children: [
       {
         path: '*',
-        element: <Navigate to='/' replace />,
+        element: <Navigate to="/" replace />,
         index: true,
-      }, {
+      },
+      {
         path: '01-rays',
-        element: <Animations animation="rays"  />
-      }
-    ]
+        element: <Animations animation="rays" />,
+      },
+    ],
   },
-])
+]);
 
 export default router;
