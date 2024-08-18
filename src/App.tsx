@@ -5,10 +5,10 @@ import DrawerMenu from './components/DrawerMenu';
 
 function App() {
   return (
-    <>
-      <DrawerMenu />
+    <div id="app">
+      <DrawerMenu id="drawer-menu" />
       <Outlet />
-    </>
+    </div>
   );
 }
 

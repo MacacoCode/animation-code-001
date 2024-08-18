@@ -1,1 +1,1 @@
-export type TAnimation = 'rays';
+export type TAnimation = '01-rays';

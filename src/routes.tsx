@@ -14,7 +14,7 @@ const router = createBrowserRouter([
       },
       {
         path: '01-rays',
-        element: <Animations animation="rays" />,
+        element: <Animations animation="01-rays" />,
       },
     ],
   },

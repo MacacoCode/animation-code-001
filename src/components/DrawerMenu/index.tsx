@@ -10,7 +10,11 @@ const navItems = [
   },
 ];
 
-const DrawerMenu: React.FC = () => {
+interface IDrawerMenuProps {
+  id?: string;
+}
+
+const DrawerMenu = ({ id }: IDrawerMenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDrawer = () => {
@@ -18,7 +22,7 @@ const DrawerMenu: React.FC = () => {
   };
 
   return (
-    <div>
+    <div id={id}>
       <button className={styles['menu-button']} onClick={toggleDrawer}>
         ☰
       </button>
